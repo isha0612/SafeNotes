@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+form {
+    margin: 40px auto;
+    padding: 10px 0 0 20px;
+    width: 35%;
+    height: 20%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px grey;
+
+    textarea {
+        font-family: 'Nunito';
+        width: 70%;
+        font-size: 16px;
+        color: #2C3333;
+        border: none;
+        resize: none;
+        padding: 10px 10px 0;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .addIcon {
+        padding: 20px;
+        font-size: 50px;
+        &:hover {
+            transition: 0.2s;
+            transform: translateY(-5px);
+        }
+    }
+}
