@@ -11,20 +11,20 @@ function App() {
   const [items, setItem] = useState([]);
   const [menu, setMenu] = useState(false);
 
-  // useEffect(() => {
-  //   const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
 
-  //   if(savedNotes) {
-  //     setItem(savedNotes);
-  //   }
-  // }, [])
+    if(savedNotes) {
+      setItem(savedNotes);
+    }
+  }, [])
 
-  // useEffect(() => {
-  //   localStorage.setItem(
-  //     'react-notes-app-data',
-  //     JSON.stringify(items)
-  //   )
-  // }, [items]);
+  useEffect(() => {
+    localStorage.setItem(
+      'react-notes-app-data',
+      JSON.stringify(items)
+    )
+  }, [items]);
 
   const menuClicked = () => {
     setMenu(prev => !prev);
