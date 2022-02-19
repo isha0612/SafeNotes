@@ -47,7 +47,7 @@ function App() {
         {menu && <Menu menuClicked={menuClicked} menu={menu}/>} 
         <Header menuClicked={menuClicked} />
       <Routes>
-        <Route exact path='/' element={<NormalNotes onAdd={addNote} items={items} menu={menu}/>}/>
+        <Route exact path='/' element={<NormalNotes addNote={addNote} items={items} menu={menu}/>}/>
         <Route exact path="/delete" element={<DeletedNotes />}/>
         <Route exact path="/archive" element={<ArchivedNotes />}/>
       </Routes>

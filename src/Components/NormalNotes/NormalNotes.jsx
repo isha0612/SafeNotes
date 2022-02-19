@@ -1,6 +1,7 @@
 import React from 'react'
-import AddNotes from '../AddNotes/AddNotes'
-import NotesList from '../NotesList/NotesList'
+import AddNotes from './AddNotes/AddNotes'
+import NotesList from './NotesList/NotesList'
+import './NormalNotes.scss'
 
 export default function NormalNotes(props) {
   return (
