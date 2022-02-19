@@ -3,6 +3,7 @@ import Header from './Header/Header'
 import AddNotes from './AddNotes/AddNotes'
 import Menu from './Menu/Menu'
 import NotesList from './NotesList/NotesList'
+import Footer from './Footer/Footer'
 import './App.css';
 
 function App() {
@@ -10,20 +11,20 @@ function App() {
   const [items, setItem] = useState([]);
   const [menu, setMenu] = useState(false);
 
-  useEffect(() => {
-    const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
+  // useEffect(() => {
+  //   const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
 
-    if(savedNotes) {
-      setItem(savedNotes);
-    }
-  }, [])
+  //   if(savedNotes) {
+  //     setItem(savedNotes);
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    localStorage.setItem(
-      'react-notes-app-data',
-      JSON.stringify(items)
-    )
-  }, [items]);
+  // useEffect(() => {
+  //   localStorage.setItem(
+  //     'react-notes-app-data',
+  //     JSON.stringify(items)
+  //   )
+  // }, [items]);
 
   const menuClicked = () => {
     setMenu(prev => !prev);
@@ -58,6 +59,7 @@ function App() {
           )
         })}
       </div>
+      <Footer />
     </>
   );
 }
