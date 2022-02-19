@@ -4,6 +4,9 @@ import AddNotes from './AddNotes/AddNotes'
 import Menu from './Menu/Menu'
 import NotesList from './NotesList/NotesList'
 import Footer from './Footer/Footer'
+import DeletedNotes from './DeletedNotes/DeletedNotes'
+import ArchivedNotes from './ArchivedNotes/ArchivedNotes'
+import {Route, Routes, BrowserRouter as Router} from 'react-router-dom'; 
 import './App.scss';
 
 function App() {
