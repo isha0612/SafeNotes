@@ -54,7 +54,7 @@ export default function AddNote(props) {
             placeholder='Take a note...' 
             spellCheck='false' /> 
             <div>
-              <AddCircleIcon style={{color: '#f7b83a', cursor:'pointer'}} 
+              <AddCircleIcon
               className='addIcon'
               onClick={submitNote} />
             </div>

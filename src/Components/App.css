@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
-.addNote {
+.addNote, .notes-list {
   display: flex;
+  margin: 30px 0;
+  flex-wrap: wrap;
 }
