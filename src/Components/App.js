@@ -44,8 +44,13 @@ function App() {
 
   return (
     <>
-      {menu && <Menu menuClicked={menuClicked} menu={menu}/>} 
-      <Header menuClicked={menuClicked} />
+    <Router>
+        {menu && <Menu menuClicked={menuClicked} menu={menu}/>} 
+        <Header menuClicked={menuClicked} />
+        <Routes>
+        <Route exact path="/delete" element={<DeletedNotes />}/>
+        <Route exact path="/archive" element={<ArchivedNotes />}/>
+      </Routes>
       <AddNotes onAdd={addNote} />
       <div className='notes-list'>
       {items.map((val, index) => {
@@ -61,6 +66,7 @@ function App() {
         })}
       </div>
       <Footer />
+      </Router>
     </>
   );
 }

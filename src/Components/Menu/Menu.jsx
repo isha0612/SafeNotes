@@ -2,6 +2,7 @@ import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArchiveRoundedIcon from '@mui/icons-material/ArchiveRounded';
 import CloseIcon from '@mui/icons-material/Close';
+import {Link} from 'react-router-dom'
 import './Menu.scss'
 
 export default function Menu(props) {
@@ -13,14 +14,14 @@ export default function Menu(props) {
             />
         </div>
         <div className='lists'>
-      <div className='icons'>
-        <DeleteIcon className='form-icon'/>
-        <span> Delete</span>
-      </div>
-      <div className='icons'>
-        <ArchiveRoundedIcon className='form-icon'/>
-        <span>Archive</span>
-      </div>
+        <Link to="/delete" className='icons' onClick={props.menuClicked}>
+          <DeleteIcon className='form-icon'/>
+          <span> Delete</span>
+        </Link>
+        <Link to="/archive" className='icons' onClick={props.menuClicked}>
+          <ArchiveRoundedIcon className='form-icon'/>
+          <span>Archive</span>
+        </Link>
       </div>
     </div>
   )

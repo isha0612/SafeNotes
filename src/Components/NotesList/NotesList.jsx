@@ -1,7 +1,6 @@
 import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArchiveRoundedIcon from '@mui/icons-material/ArchiveRounded';
-import {Link} from 'react-router-dom';
 import './NotesList.scss'
 
 export default function NotesList(props) {
@@ -10,8 +9,8 @@ export default function NotesList(props) {
         <p style={{fontWeight: 'bold'}}>{props.title}</p>
         <p>{props.content}</p>
         <div>
-            <Link to="/archive"><ArchiveRoundedIcon className='note-icon'/></Link>
-            <Link to="/delete"><DeleteIcon className='note-icon'/></Link>
+            <ArchiveRoundedIcon className='note-icon'/>
+            <DeleteIcon className='note-icon'/>
         </div>
     </div>
   )
