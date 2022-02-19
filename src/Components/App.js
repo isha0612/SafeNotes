@@ -4,7 +4,7 @@ import AddNotes from './AddNotes/AddNotes'
 import Menu from './Menu/Menu'
 import NotesList from './NotesList/NotesList'
 import Footer from './Footer/Footer'
-import './App.css';
+import './App.scss';
 
 function App() {
 
@@ -41,11 +41,9 @@ function App() {
 
   return (
     <>
+      {menu && <Menu menuClicked={menuClicked} menu={menu}/>} 
       <Header menuClicked={menuClicked} />
-      <div className='addNote'>
-        {menu && <Menu />}
-        <AddNotes onAdd={addNote} />
-      </div>
+      <AddNotes onAdd={addNote} />
       <div className='notes-list'>
       {items.map((val, index) => {
           return (
