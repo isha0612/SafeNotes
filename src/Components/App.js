@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import Header from './Header/Header'
-import AddNotes from './AddNotes/AddNotes'
 import Menu from './Menu/Menu'
-import NotesList from './NotesList/NotesList'
 import Footer from './Footer/Footer'
+import NormalNotes from './NormalNotes/NormalNotes'
 import DeletedNotes from './DeletedNotes/DeletedNotes'
 import ArchivedNotes from './ArchivedNotes/ArchivedNotes'
 import {Route, Routes, BrowserRouter as Router} from 'react-router-dom'; 
@@ -47,24 +46,11 @@ function App() {
     <Router>
         {menu && <Menu menuClicked={menuClicked} menu={menu}/>} 
         <Header menuClicked={menuClicked} />
-        <Routes>
+      <Routes>
+        <Route exact path='/' element={<NormalNotes onAdd={addNote} items={items} menu={menu}/>}/>
         <Route exact path="/delete" element={<DeletedNotes />}/>
         <Route exact path="/archive" element={<ArchivedNotes />}/>
       </Routes>
-      <AddNotes onAdd={addNote} />
-      <div className='notes-list'>
-      {items.map((val, index) => {
-          return (
-            <NotesList 
-            key={index}
-            id={index}
-            title={val.title}
-            content={val.content}
-            menu={menu}
-            />
-          )
-        })}
-      </div>
       <Footer />
       </Router>
     </>
