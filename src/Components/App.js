@@ -4,7 +4,6 @@ import Menu from './Menu/Menu'
 import Footer from './Footer/Footer'
 import NormalNotes from './NormalNotes/NormalNotes'
 import DeletedNotes from './DeletedNotes/DeletedNotes'
-import ArchivedNotes from './ArchivedNotes/ArchivedNotes'
 import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
 import DataState from '../Context/DataState' 
 import './App.scss';
@@ -26,7 +25,6 @@ function App() {
       <Routes>
         <Route exact path='/' element={<NormalNotes /> } />
         <Route exact path="/delete" element={<DeletedNotes />}/>
-        <Route exact path="/archive" element={<ArchivedNotes />}/>
       </Routes>
       <Footer />
       </Router>

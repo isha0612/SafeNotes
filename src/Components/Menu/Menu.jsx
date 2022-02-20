@@ -1,6 +1,5 @@
 import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
-import ArchiveRoundedIcon from '@mui/icons-material/ArchiveRounded';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import {Link} from 'react-router-dom'
@@ -22,10 +21,6 @@ export default function Menu(props) {
         <Link to="/delete" className='icons' onClick={props.menuClicked}>
           <DeleteIcon className='form-icon'/>
           <span>Delete</span>
-        </Link>
-        <Link to="/archive" className='icons' onClick={props.menuClicked}>
-          <ArchiveRoundedIcon className='form-icon'/>
-          <span>Archive</span>
         </Link>
       </div>
     </div>
