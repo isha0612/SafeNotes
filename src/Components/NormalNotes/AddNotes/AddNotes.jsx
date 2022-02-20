@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import DataContext from "../../../Context/DataContext";
 import './AddNotes.scss'
 
-export default function AddNote(props) {
+export default function AddNote() {
+  const context = useContext(DataContext);
 
   const [formValue, setValue] = useState(false);
   const [info, setInfo] = useState({
@@ -26,7 +28,7 @@ export default function AddNote(props) {
 
   const submitNote = () => {
     setValue(false);
-    props.onAdd(info);
+    context.addNote(info);
     setInfo({
       title: "",
       content: ""

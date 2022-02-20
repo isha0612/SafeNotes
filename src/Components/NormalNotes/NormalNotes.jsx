@@ -1,21 +1,22 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import AddNotes from './AddNotes/AddNotes'
 import NotesList from './NotesList/NotesList'
+import DataContext from "../../Context/DataContext";
 import './NormalNotes.scss'
 
-export default function NormalNotes(props) {
+export default function NormalNotes() {
+  const context = useContext(DataContext);
   return (
     <div>
-        <AddNotes onAdd={props.addNote} />
+        <AddNotes />
         <div className='notes-list'>
-        {props.notes.map((val, index) => {
+        {context.notes.map((val, index) => {
           return (
             <NotesList 
             key={index}
             id={index}
             title={val.title}
             content={val.content}
-            menu={props.menu}
             />
           )
         })}
