@@ -10,7 +10,7 @@ export default function Header(props) {
     <div className='header'>
       <MenuRoundedIcon 
       onClick={props.menuClicked}
-      className={props.menu ? 'menuIcon-hide' : 'menuIcon'}/>
+      className={props.menu ? 'menuIcon menuIcon-hide' : 'menuIcon'}/>
       <Link to="/">
       <img src={keepImg} aria-hidden alt="keep image"/>
       </Link>

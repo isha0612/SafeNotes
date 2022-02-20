@@ -20,12 +20,13 @@
         }
     }
 
+    .menuIcon-hide {
+        visibility: hidden;
+    }
+
     img {
         margin: 0 10px 0 40px;
     }
 
 }
 
-.menuIcon-hide {
-    display: none;
-}
