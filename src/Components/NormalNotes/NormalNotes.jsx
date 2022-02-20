@@ -8,7 +8,7 @@ export default function NormalNotes(props) {
     <div>
         <AddNotes onAdd={props.addNote} />
         <div className='notes-list'>
-        {props.items.map((val, index) => {
+        {props.notes.map((val, index) => {
           return (
             <NotesList 
             key={index}

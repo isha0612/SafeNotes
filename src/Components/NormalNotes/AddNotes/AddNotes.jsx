@@ -25,6 +25,7 @@ export default function AddNote(props) {
   }
 
   const submitNote = () => {
+    setValue(false);
     props.onAdd(info);
     setInfo({
       title: "",

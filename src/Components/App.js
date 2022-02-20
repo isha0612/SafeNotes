@@ -10,30 +10,30 @@ import './App.scss';
 
 function App() {
 
-  const [items, setItem] = useState([]);
+  const [notes, setNote] = useState([]);
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
 
     if(savedNotes) {
-      setItem(savedNotes);
+      setNote(savedNotes);
     }
   }, [])
 
   useEffect(() => {
     localStorage.setItem(
       'react-notes-app-data',
-      JSON.stringify(items)
+      JSON.stringify(notes)
     )
-  }, [items]);
+  }, [notes]);
 
   const menuClicked = () => {
     setMenu(prev => !prev);
   }
 
   const addNote = (info) => {
-    setItem(prev => {
+    setNote(prev => {
       return [
         ...prev, 
         info
@@ -44,10 +44,10 @@ function App() {
   return (
     <>
     <Router>
-        {menu && <Menu menuClicked={menuClicked} menu={menu}/>} 
+        <Menu menuClicked={menuClicked} menu={menu}/> 
         <Header menuClicked={menuClicked} menu={menu}/>
       <Routes>
-        <Route exact path='/' element={<NormalNotes addNote={addNote} items={items} menu={menu}/>}/>
+        <Route exact path='/' element={<NormalNotes addNote={addNote} notes={notes} menu={menu}/>}/>
         <Route exact path="/delete" element={<DeletedNotes />}/>
         <Route exact path="/archive" element={<ArchivedNotes />}/>
       </Routes>

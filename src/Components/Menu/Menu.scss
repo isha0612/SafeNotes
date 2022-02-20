@@ -6,10 +6,8 @@
     color: #eeeaea;
     height: 100%;
     width: 20%;
-    opacity: 0.85;
+    opacity: 0.95;
     z-index: 1;
-    transform: translateX(-10px);
-    transition: transform 1s ease-in-out;
 
     .close-icon {
         display: flex;
@@ -40,4 +38,8 @@
             }
         }
     }
+}
+
+.menu-hide {
+    visibility: hidden;
 }
