@@ -45,16 +45,13 @@
 
 .form-dark {
     color: #fff;
-    background-color: #2C3333;
-    box-shadow: 0 1px 5px grey;
+    background-color: #303233;
+    // box-shadow: 0 1px 5px grey;
+    box-shadow: none;
     border: 1px solid #cfcdcd;
 
-    textarea {
+    textarea, ::placeholder {
         color: #fff;
-        background-color: #2C3333;
-    }
-    ::placeholder {
-        color: #fff;
-        background-color: #2C3333;
+        background-color: #303233;
     }
 }
