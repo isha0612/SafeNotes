@@ -46,6 +46,8 @@ const DataState = (props) => {
     });
   }
 
+
+
   return (
       <DataContext.Provider value={{notes, addNote, dNotes, delNote}}>
         {props.children}

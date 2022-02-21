@@ -15,7 +15,6 @@ function App() {
     setMenu(prev => !prev);
   }
 
-
   return (
     <>
     <DataState>

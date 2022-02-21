@@ -4,6 +4,7 @@ import NotesList from '../NormalNotes/NotesList/NotesList';
 
 export default function DeletedNotes() {
   const context = useContext(DataContext);
+
   return (
     <>
     <div className='notes-list'>
