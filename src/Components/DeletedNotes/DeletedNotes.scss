@@ -5,9 +5,13 @@
     flex-direction: row-reverse;
     font-family: 'Nunito';
 
+    h2 {
+        margin: 150px auto;
+    }
+
     p {
         display: flex;
-        margin: 10px 40px;
+        margin: 20px 50px;
         padding: 10px 15px;
         background-color: #515c5c;
         color: #fff;
@@ -17,6 +21,19 @@
 
         &:hover {
             cursor: pointer;
+            transform: scale(1.02);
         }
     }
 }
+
+.del-text-dark {
+    p {
+        background-color: #f7b83a;
+        color: #000;
+    }
+
+    h2 {
+        color: #fff;
+    }
+}
+

@@ -8,6 +8,8 @@ const DataState = (props) => {
 
   const [dNotes, setDelNotes] = useState([]);
 
+  const [light, setLight] = useState(true);
+
   useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
     const delNotes = JSON.parse(localStorage.getItem("react-del-notes-data"));
@@ -51,8 +53,12 @@ const DataState = (props) => {
     setDelNotes([]);
   }
 
+  const toggleClicked = () => {
+    setLight(prev => !prev);
+  }
+
   return (
-      <DataContext.Provider value={{notes, addNote, dNotes, delNote, delAll}}>
+      <DataContext.Provider value={{notes, addNote, dNotes, delNote, delAll, light, toggleClicked}}>
         {props.children}
       </DataContext.Provider>
   );

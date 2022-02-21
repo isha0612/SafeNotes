@@ -5,7 +5,17 @@
     background-color: #000;
     text-align: center;
     width: 100%;
-    color: #f7b83a;
-    padding: 40px 0 20px;
+    color: #f7b634;
+    padding: 60px 0 50px;
     margin-top: auto;
+
+    p {
+        margin: 0;
+    }
+}
+
+.footer-dark {
+    background-color: #2C3333;
+    color: #fff;
+    border-top: 2px solid #fff;
 }

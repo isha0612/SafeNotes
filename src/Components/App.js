@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import Header from './Header/Header'
 import Menu from './Menu/Menu'
 import Footer from './Footer/Footer'
 import NormalNotes from './NormalNotes/NormalNotes'
 import DeletedNotes from './DeletedNotes/DeletedNotes'
 import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
-import DataState from '../Context/DataState' 
+import DataContext from '../Context/DataContext'
 import './App.scss';
 
 function App() {
+  const context = useContext(DataContext);
 
   const [menu, setMenu] = useState(false);
 
@@ -17,8 +18,7 @@ function App() {
   }
 
   return (
-    <>
-      <DataState>
+    <div className={context.light ? 'body' : 'body body-dark'}>
         <Router>
           <Menu menuClicked={menuClicked} menu={menu}/> 
           <Header menuClicked={menuClicked} menu={menu}/>
@@ -28,8 +28,7 @@ function App() {
           </Routes>
           <Footer />
         </Router>
-      </DataState>
-    </>
+    </div>
   );
 }
 

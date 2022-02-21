@@ -39,7 +39,7 @@ export default function AddNote() {
 
   return (
     <>
-      <form>
+      <form className={context.light ? 'form' : 'form form-dark'}>
             <textarea value={info.title} 
             name="title" 
             cols="70" 

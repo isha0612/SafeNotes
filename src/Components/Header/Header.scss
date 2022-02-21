@@ -3,12 +3,13 @@
 .header {
     display: flex;
     align-items: center;
-    color: #515c5c;
-    margin: 30px;
-    padding-bottom: 20px;
+    color: hsl(180, 7%, 35%);
+    background-color: #e4e1e1;
+    padding: 30px 40px 30px 40px;
     border-bottom: #D1D1D1 0.1rem solid;
     font-family: 'Nanum Gothic';
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 20px;
 
     .menuIcon {
         font-size: 33px;
@@ -29,5 +30,27 @@
         margin: 0 10px 0 40px;
     }
 
+    .toggle-switch {
+        // margin-left: auto;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        p {
+            font-size: 15px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.header-dark {
+    background-color: #2C3333;
+    color: #fff;
+    border-bottom: none;
+    
+    .menuIcon {
+        &:hover {
+            background-color: #686464;
+        }
+    }
 }
 

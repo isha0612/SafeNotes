@@ -14,7 +14,7 @@ export default function NotesList(props) {
   }
 
   return (
-    <div className='note'>
+    <div className={context.light ? 'note' : 'note note-dark'}>
         <p style={{fontWeight: 'bold'}}>{props.title}</p>
         <p>{props.content}</p>
         {location.pathname === '/' && 

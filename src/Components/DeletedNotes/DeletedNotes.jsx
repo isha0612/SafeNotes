@@ -10,7 +10,10 @@ export default function DeletedNotes() {
 
   return (
     <>
-      <div className='del-text'>
+      <div className={context.light ? 'del-text' : 'del-text del-text-dark'}>
+        {context.dNotes.length === 0 &&
+          <h2>Sorry, Bin is Empty!</h2>
+        }
         {context.dNotes.length !== 0 && 
         <p onClick={context.delAll}> 
           <DeleteIcon style={{marginRight: '5px'}}/> 

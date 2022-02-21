@@ -39,3 +39,17 @@
         box-shadow: 0 0.1rem 0.3rem grey;
     }
 }
+
+.note-dark {
+    background-color: #2C3333;
+    color: #fff;
+
+    div {
+        .note-icon {
+            color: #fff;
+            &:hover {
+                background-color: rgb(145, 142, 142);;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-form {
+.form {
     margin: 40px auto;
     padding: 10px 0 0 20px;
     width: 35%;
@@ -40,5 +40,21 @@ form {
             transition: 0.2s;
             transform: translateY(-5px);
         }
+    }
+}
+
+.form-dark {
+    color: #fff;
+    background-color: #2C3333;
+    box-shadow: 0 1px 5px grey;
+    border: 1px solid #cfcdcd;
+
+    textarea {
+        color: #fff;
+        background-color: #2C3333;
+    }
+    ::placeholder {
+        color: #fff;
+        background-color: #2C3333;
     }
 }
