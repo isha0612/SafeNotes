@@ -3,6 +3,7 @@ import DataContext from "./DataContext";
 import { useState, useEffect } from "react";
 
 const DataState = (props) => {
+
   const [notes, setNotes] = useState([]);
 
   const [dNotes, setDelNotes] = useState([]);
@@ -39,8 +40,8 @@ const DataState = (props) => {
         ...prev,
         ...note
       ]
-    })
-    console.log(dNotes);
+    });
+    
     setNotes(prev => {
       return prev.filter((val, index) => index !== id);
     });

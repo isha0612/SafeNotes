@@ -9,6 +9,7 @@ import DataState from '../Context/DataState'
 import './App.scss';
 
 function App() {
+
   const [menu, setMenu] = useState(false);
 
   const menuClicked = () => {
@@ -17,16 +18,16 @@ function App() {
 
   return (
     <>
-    <DataState>
-    <Router>
-        <Menu menuClicked={menuClicked} menu={menu}/> 
-        <Header menuClicked={menuClicked} menu={menu}/>
-      <Routes>
-        <Route exact path='/' element={<NormalNotes /> } />
-        <Route exact path="/delete" element={<DeletedNotes />}/>
-      </Routes>
-      <Footer />
-      </Router>
+      <DataState>
+        <Router>
+          <Menu menuClicked={menuClicked} menu={menu}/> 
+          <Header menuClicked={menuClicked} menu={menu}/>
+          <Routes>
+            <Route exact path='/' element={<NormalNotes /> } />
+            <Route exact path="/delete" element={<DeletedNotes />}/>
+          </Routes>
+          <Footer />
+        </Router>
       </DataState>
     </>
   );

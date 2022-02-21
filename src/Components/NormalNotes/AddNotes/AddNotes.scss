@@ -29,10 +29,12 @@ form {
         display: flex;
         justify-content: flex-end;
     }
+
     .addIcon {
         padding: 20px;
         font-size: 50px;
         color: #f7b83a;
+        
         &:hover {
             cursor: pointer;
             transition: 0.2s;

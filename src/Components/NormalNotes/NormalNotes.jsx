@@ -20,7 +20,7 @@ export default function NormalNotes() {
             />
           )
         })}
-         </div>
+        </div>
     </div>
   )
 }

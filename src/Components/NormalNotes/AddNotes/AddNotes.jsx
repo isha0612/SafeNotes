@@ -4,9 +4,11 @@ import DataContext from "../../../Context/DataContext";
 import './AddNotes.scss'
 
 export default function AddNote() {
+
   const context = useContext(DataContext);
 
   const [formValue, setValue] = useState(false);
+  
   const [info, setInfo] = useState({
     title: "",
     content: ""

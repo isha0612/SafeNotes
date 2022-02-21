@@ -5,19 +5,23 @@ import DataContext from '../../../Context/DataContext';
 import './NotesList.scss'
 
 export default function NotesList(props) {
+
   const context = useContext(DataContext);
   const location = useLocation();
 
   const delClicked = () => {
     context.delNote(props.id);
   }
+
   return (
     <div className='note'>
         <p style={{fontWeight: 'bold'}}>{props.title}</p>
         <p>{props.content}</p>
-        {location.pathname === '/' && <div>
+        {location.pathname === '/' && 
+        <div>
             <DeleteIcon className='note-icon' onClick={delClicked}/>
-        </div>}
+        </div>
+        }
     </div>
   )
 }
