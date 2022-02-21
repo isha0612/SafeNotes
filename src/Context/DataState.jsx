@@ -46,10 +46,12 @@ const DataState = (props) => {
     });
   }
 
-
+  const delAll = () => {
+    setDelNotes([]);
+  }
 
   return (
-      <DataContext.Provider value={{notes, addNote, dNotes, delNote}}>
+      <DataContext.Provider value={{notes, addNote, dNotes, delNote, delAll}}>
         {props.children}
       </DataContext.Provider>
   );

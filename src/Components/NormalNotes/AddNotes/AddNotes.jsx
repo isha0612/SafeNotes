@@ -45,8 +45,7 @@ export default function AddNote() {
             placeholder={formValue ? "Title" : "Take a note..."} 
             onClick={onfocus} style={{fontWeight: 'bold'}} 
             onChange={formValue ? onchange : null}
-            spellCheck='false'>
-             </textarea> 
+            spellCheck='false'/>
             {formValue ? 
             <>
             <textarea value={info.content} 
@@ -55,11 +54,11 @@ export default function AddNote() {
             cols="70" 
             rows="6" 
             placeholder='Take a note...' 
-            spellCheck='false' /> 
+            spellCheck='false'/> 
             <div>
               <AddCircleIcon
-              className='addIcon'
-              onClick={submitNote} />
+              className='addIcon' 
+              onClick={info.title === '' && info.content === '' ? null : submitNote}/>
             </div>
             </>
             : ''}
