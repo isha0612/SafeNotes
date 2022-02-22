@@ -21,12 +21,16 @@ const DataState = (props) => {
     if(delNotes) {
       setDelNotes(delNotes);
     }
+
+    setLight(JSON.parse(localStorage.getItem("react-theme-data")));
+    
   }, []);
 
   useEffect(() => {
     localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
     localStorage.setItem("react-del-notes-data",JSON.stringify(dNotes));
-  }, [notes, dNotes]);
+    localStorage.setItem("react-theme-data",JSON.stringify(light));
+  }, [notes, dNotes, light]);
 
   const addNote = (info) => {
     setNotes((prev) => {
@@ -34,7 +38,7 @@ const DataState = (props) => {
     });
   };
 
-  const delNote = (id) => {
+  const addDelNote = (id) => {
     const note = notes.filter((val, index) => index === id);
 
     setDelNotes(prev => {
@@ -49,6 +53,12 @@ const DataState = (props) => {
     });
   }
 
+  const delNote = id => {
+    setDelNotes(prev => {
+      return prev.filter((val, index) => index !== id);
+    })
+  }
+
   const delAll = () => {
     setDelNotes([]);
   }
@@ -58,7 +68,7 @@ const DataState = (props) => {
   }
 
   return (
-      <DataContext.Provider value={{notes, addNote, dNotes, delNote, delAll, light, toggleClicked}}>
+      <DataContext.Provider value={{notes, addNote, dNotes, addDelNote, delNote, delAll, light, toggleClicked}}>
         {props.children}
       </DataContext.Provider>
   );

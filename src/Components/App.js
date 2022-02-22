@@ -20,7 +20,7 @@ function App() {
   return (
     <div className={context.light ? 'body' : 'body body-dark'}>
         <Router>
-          <Menu menuClicked={menuClicked} menu={menu}/> 
+          {menu && <Menu menuClicked={menuClicked}/> }
           <Header menuClicked={menuClicked} menu={menu}/>
           <Routes>
             <Route exact path='/' element={<NormalNotes /> } />
