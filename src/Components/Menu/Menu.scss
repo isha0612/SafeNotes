@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .menu {
-    position: absolute;
-    background-color: #242222;
+    position: fixed;
+    background-color: #303233;
     color: #eeeaea;
     height: 100%;
     width: 300px;
@@ -16,7 +16,7 @@
     }
     
     .lists {
-        margin-top: 150px;
+        margin-top: 160px;
 
         .icons {
             text-decoration: none;
@@ -39,5 +39,10 @@
             }
         }
     }
+}
+
+.menu-dark {
+    background-color: #080805;
+    opacity: 0.85;
 }
 

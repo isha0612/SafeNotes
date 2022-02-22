@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import {Link} from 'react-router-dom'
 import styled, {keyframes} from 'styled-components'
+import DataContext from '../../Context/DataContext';
 import './Menu.scss'
 
 
 export default function Menu(props) {
+  const context = useContext(DataContext);
   return (
-    <MenuAnimated className='menu'>
+    <MenuAnimated className={context.light ? 'menu' : 'menu menu-dark'}>
       <div className='close-icon'>
         <CloseIcon style={{fontSize: '30px', cursor: 'pointer'}}
         onClick={props.menuClicked}/>
