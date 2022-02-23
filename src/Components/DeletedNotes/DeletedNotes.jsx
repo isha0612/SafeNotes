@@ -16,7 +16,8 @@ export default function DeletedNotes() {
         }
         {context.dNotes.length !== 0 && 
         <p onClick={context.delAll}> 
-          <DeleteIcon style={{marginRight: '5px'}}/> 
+          <DeleteIcon style={{marginRight: '5px'}}
+          className='del-icon'/> 
           Delete everything 
         </p>}
       </div>

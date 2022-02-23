@@ -17,10 +17,11 @@ export default function Header(props) {
         <Link to="/">
         <img src={keepImg} aria-hidden alt="keep image"/>
         </Link>
-        Google Keep Clone
+        <p>Google Keep Clone</p>
         <div className='toggle-switch'>
           <p>Enable {context.light ? 'dark' : 'light'} mode</p>
           <Switch
+           className='.switch'
            onChange={context.toggleClicked}
            inputProps={{ 'aria-label': 'controlled' }}
           />

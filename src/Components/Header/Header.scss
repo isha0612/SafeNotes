@@ -58,3 +58,38 @@
     }
 }
 
+@media screen and (max-width: 1030px) {
+    .header, .header-dark {
+        p {
+            font-size: 0.99rem;
+        }
+        .menuIcon {
+            font-size: 25px;
+        }
+
+        .toggle-switch {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .header, .header-dark {
+
+        .toggle-switch {
+            p {
+                visibility: hidden;
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .header, .header-dark {
+        padding: 20px 20px 20px 20px;
+    }
+}
+

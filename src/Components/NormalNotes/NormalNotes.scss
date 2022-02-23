@@ -3,3 +3,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 480px) {
+    .notes-list {
+        align-items: center;
+        justify-content: center;
+    }
+}

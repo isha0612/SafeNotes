@@ -62,3 +62,31 @@
         color: #fff;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .form, .form-dark{
+        textarea, ::placeholder {
+            font-size: 0.9rem;
+        }
+
+        .addIcon {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .form, .form-dark {
+        .addIcon {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .form, .form-dark {
+        textarea, ::placeholder {
+            font-size: 0.75rem;
+        }
+    }
+}
