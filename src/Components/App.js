@@ -4,7 +4,7 @@ import Menu from './Menu/Menu'
 import Footer from './Footer/Footer'
 import NormalNotes from './NormalNotes/NormalNotes'
 import DeletedNotes from './DeletedNotes/DeletedNotes'
-import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
+import {Route, Routes, HashRouter as Router} from 'react-router-dom';
 import DataContext from '../Context/DataContext'
 import './App.scss';
 

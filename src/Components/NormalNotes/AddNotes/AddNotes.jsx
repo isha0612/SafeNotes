@@ -21,6 +21,10 @@ export default function AddNote() {
 
   const onoutfocus = () => {
     setValue(false);
+    setInfo({
+      title: "",
+      content: ""
+    });
   }
   const onchange = (e) => {
     const {value, name} = e.target;
