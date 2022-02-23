@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/keep-clone/static/css/main.8991fdc0.css",
-    "main.js": "/keep-clone/static/js/main.f0626f2e.js",
+    "main.js": "/keep-clone/static/js/main.668dbcf4.js",
     "index.html": "/keep-clone/index.html",
     "main.8991fdc0.css.map": "/keep-clone/static/css/main.8991fdc0.css.map",
-    "main.f0626f2e.js.map": "/keep-clone/static/js/main.f0626f2e.js.map"
+    "main.668dbcf4.js.map": "/keep-clone/static/js/main.668dbcf4.js.map"
   },
   "entrypoints": [
     "static/css/main.8991fdc0.css",
-    "static/js/main.f0626f2e.js"
+    "static/js/main.668dbcf4.js"
   ]
 }
