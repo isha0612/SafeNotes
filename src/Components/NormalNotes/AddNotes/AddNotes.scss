@@ -28,10 +28,12 @@
     div {
         display: flex;
         justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 20px;
     }
 
     .addIcon {
-        padding: 20px;
+        margin:0 10px 20px 0;
         font-size: 50px;
         color: #f7b83a;
         
@@ -53,5 +55,10 @@
     textarea, ::placeholder {
         color: #fff;
         background-color: #303233;
+    }
+
+    .addIcon {
+        // color: #080805;
+        color: #fff;
     }
 }

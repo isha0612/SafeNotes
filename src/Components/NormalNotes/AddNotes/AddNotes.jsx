@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import ReplayCircleFilledIcon from '@mui/icons-material/ReplayCircleFilled';
 import DataContext from "../../../Context/DataContext";
 import './AddNotes.scss'
 
@@ -18,6 +19,9 @@ export default function AddNote() {
     setValue(true);
   }
 
+  const onoutfocus = () => {
+    setValue(false);
+  }
   const onchange = (e) => {
     const {value, name} = e.target;
     setInfo(prev => {
@@ -58,6 +62,8 @@ export default function AddNote() {
             placeholder='Take a note...' 
             spellCheck='false'/> 
             <div>
+              <ReplayCircleFilledIcon className='addIcon'
+              onClick={onoutfocus}/>
               <AddCircleIcon
               className='addIcon' 
               onClick={info.title === '' && info.content === '' ? null : submitNote}/>
