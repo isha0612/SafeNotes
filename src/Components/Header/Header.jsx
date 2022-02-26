@@ -17,7 +17,7 @@ export default function Header(props) {
         <Link to="/">
         <img src={keepImg} aria-hidden alt="keep image"/>
         </Link>
-        <p>Keep Notes</p>
+        <p>SafeNotes</p>
         <div className='toggle-switch'>
           <p>Enable {context.light ? 'dark' : 'light'} mode</p>
           <Switch

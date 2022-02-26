@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <div className={context.light ? 'footer' : 'footer footer-dark'}>
         <p>&#9400; copyright {year}</p>
-        <p>Keep Notes</p>
+        <p>SafeNotes</p>
     </div>
   )
 }
