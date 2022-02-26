@@ -17,7 +17,7 @@ export default function Header(props) {
         <Link to="/">
         <img src={keepImg} aria-hidden alt="keep image"/>
         </Link>
-        <p>Google Keep Clone</p>
+        <p>Keep Notes</p>
         <div className='toggle-switch'>
           <p>Enable {context.light ? 'dark' : 'light'} mode</p>
           <Switch
